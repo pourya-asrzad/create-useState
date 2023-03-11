@@ -3,8 +3,7 @@ console.log("arman");
 type setter = (callFunc: any) => any;
 
 class useState {
-  private initialValue: (string | number)[];
-  constructor() {
-    this.initialValue = [];
+  constructor(public initialValue: any, setterFunc: any) {
+    this.initialValue = initialValue;
   }
 }

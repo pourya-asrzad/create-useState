@@ -1,7 +1,8 @@
 "use strict";
 console.log("arman");
 class useState {
-    constructor() {
-        this.initialValue = [];
+    constructor(initialValue, setterFunc) {
+        this.initialValue = initialValue;
+        this.initialValue = initialValue;
     }
 }
