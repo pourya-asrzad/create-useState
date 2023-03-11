@@ -5,4 +5,8 @@ class useState {
         this.initialValue = initialValue;
         this.initialValue = initialValue;
     }
+    get StateValue() {
+        return this.initialValue;
+    }
+    setter(initialValue) { }
 }
