@@ -1,1 +1,1 @@
-console.log("object");
+console.log("objec/t");
