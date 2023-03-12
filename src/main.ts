@@ -1,3 +1,4 @@
+///arman code 
 console.log("arman");
 
 type setter = (callFunc: any, initialValue: any) => {};
@@ -32,3 +33,4 @@ class useState2 {
 //let [static,setStatic] = new useState2();
 
 // console.log(a);
+
