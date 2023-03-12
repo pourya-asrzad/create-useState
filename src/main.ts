@@ -1,3 +1,4 @@
+//ali codes
 console.log("ali");
 type setter = (callFunc: any, initialValue: any) => {};
 
