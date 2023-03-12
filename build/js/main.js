@@ -1,6 +1,6 @@
 "use strict";
-///arman code 
-console.log("arman");
+//ali codes
+console.log("ali");
 let setFunc = (initialValue, prev) => {
     return (prev = initialValue);
 };
@@ -17,5 +17,3 @@ class useState2 {
         return this.state;
     }
 }
-//let [static,setStatic] = new useState2();
-// console.log(a);
