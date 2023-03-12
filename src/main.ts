@@ -1,6 +1,5 @@
-///arman code 
-console.log("arman");
-
+//ali codes
+console.log("ali");
 type setter = (callFunc: any, initialValue: any) => {};
 
 let setFunc = (initialValue: any, prev?: any): any => {
@@ -29,8 +28,3 @@ class useState2 {
     return this.state;
   }
 }
-
-//let [static,setStatic] = new useState2();
-
-// console.log(a);
-
