@@ -1,19 +1,16 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 //ali codes
 console.log("ali");
-let setFunc = (initialValue, prev) => {
-    return (prev = initialValue);
-};
-let initialValue;
-let init;
-let useState = () => [initialValue, setFunc];
-let [count, setCount] = useState();
-////////////////////////////////////////////////////////////////////////
-class useState2 {
-    constructor(stateProperty) {
-        this.useState = stateProperty;
+class useState {
+    constructor(_state = "") {
+        this._state = _state;
     }
-    get Value() {
-        return this.state;
+    get state() {
+        return this._state;
+    }
+    set state(state) {
+        this._state = state;
     }
 }
+exports.default = useState;
