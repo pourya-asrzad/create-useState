@@ -7,12 +7,18 @@ let initialValue;
 let init;
 let useState = () => [initialValue, setFunc];
 let [count, setCount] = useState();
-//let [as, d] = useState1();
+let constructorState = ["", () => { }];
+////////////////////////////////////////////////////////////////////////
 class useState2 {
-    constructor() { }
+    constructor() {
+        this.state = undefined;
+        this.setState = () => {
+            return this.state;
+        };
+        this.kol = "";
+        this.state = [];
+    }
     get Value() {
         return this.state;
     }
 }
-let a = new useState2();
-// console.log(a);

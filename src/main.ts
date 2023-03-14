@@ -1,34 +1,28 @@
-console.log("arman");
+function useState(stateVal: any) {
+  /// warning state must be const casue it's value cannot change manually
+  class useStateClass {
+    #privateState: any = stateVal;
+    constructor() {}
 
-type setter = (callFunc: any, initialValue: any) => {};
+    get state(): any {
+      return this.#privateState;
+    }
 
-let setFunc = (initialValue: any, prev?: any): any => {
-  return (prev = initialValue);
-};
-let initialValue: any;
-
-let init: any;
-let useState = () => [initialValue, setFunc];
-let [count, setCount] = useState();
-
-//let [as, d] = useState1();
-type state = any;
-type setState = () => {};
-type constructor = [state: state, setState: setState];
-type stateProperty = [state: any, setState: setState];
-////////////////////////////////////////////////////////////////////////
-class useState2 {
-  private state: any;
-  public useState: constructor;
-  constructor(stateProperty: stateProperty) {
-    this.useState = stateProperty;
+    set setStateV(currentState: any) {
+      this.#privateState = currentState;
+    }
   }
-
-  get Value(): any {
-    return this.state;
+  let statement = new useStateClass();
+  let getState = function () {
+    return statement.state;
+  };
+  function setState(newVal: any) {
+    return (statement.setStateV = newVal);
   }
+  return [getState, setState];
 }
 
-//let [static,setStatic] = new useState2();
-
-// console.log(a);
+const [count, setCount]: any = useState([12, 13]);
+console.log(count());
+setCount({ color: "#DEFFEE" });
+console.log(count());
