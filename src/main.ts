@@ -16,4 +16,4 @@ const [state,setState]= useState(1);
 console.log();
 setState(2)
 
-console.log(state);
+console.log(state+"");
