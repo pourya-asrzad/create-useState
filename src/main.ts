@@ -1,18 +1,28 @@
+function useState(stateVal: any) {
+  /// warning state must be const casue it's value cannot change manually
+  class useStateClass {
+    #privateState: any = stateVal;
+    constructor() {}
 
-//ali codes
-console.log("ali");
-export interface State {
-  state: any;
+    get state(): any {
+      return this.#privateState;
+    }
+
+    set setStateV(currentState: any) {
+      this.#privateState = currentState;
+    }
+  }
+  let statement = new useStateClass();
+  let getState = function () {
+    return statement.state;
+  };
+  function setState(newVal: any) {
+    return (statement.setStateV = newVal);
+  }
+  return [getState, setState];
 }
 
-export default class useState implements State {
-  constructor(private _state: any = "") {}
-
-  get state(): any {
-    return this._state;
-  }
-
-  set state(state: any) {
-    this._state = state;
-  }
-}
+const [count, setCount]: any = useState([12, 13]);
+console.log(count());
+setCount({ color: "#DEFFEE" });
+console.log(count());
